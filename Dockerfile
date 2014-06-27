@@ -5,6 +5,8 @@
 FROM ubuntu:14.04
 MAINTAINER Jack Chu "jack@jackchu.com"
 
+ENV http_proxy "http://172.23.12.180:9080/"
+
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
 RUN apt-get -y update
 RUN apt-get -y install wget
